@@ -20,6 +20,11 @@ a = [1,5,8,7,4,1,2,6,5,7,8,5]
 sum(a[l - 1:r]) = prefix[r] - prefix[l - 1]
 可以做到 O(1)时间内回答询问
 
+
+注: python库自带前缀和函数
+
+
+
 '''
 
 
@@ -40,6 +45,17 @@ def main():
     for x in a[l - 1:r]:
         ans2 += x
     print(f"暴力求解区间[3,7]的数组和为{ans2}")
+
+
+
+    # --------------------------------------- 以下为python库自带前缀和函数-------------------------------------------------------
+    from itertools import accumulate
+    pre1 = list(accumulate(a))
+    print(f"内置前缀和函数求得前缀和数组{pre1}")
+
+    # 初始化一个首元素
+    pre2 = list(accumulate(a,initial=0))
+    print(f"内置前缀和函数求得前缀和数组{pre2}")
 
 
 main()
