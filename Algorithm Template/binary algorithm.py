@@ -39,7 +39,7 @@ def main():
     n = len(a)
 
     # 有很多种写法 我就推荐一种
-    def bisect_l(x):
+    def bisect_l(a,x):
         # 在区间 (left, right) 内询问
         left = -1
         right = len(a)
@@ -51,7 +51,7 @@ def main():
                 left = mid
         return right
 
-    idx = bisect_l(30)
+    idx = bisect_l(a,30)
     print(f"二分求出的索引idx为:{idx},值为:{a[idx]}")
 
 
