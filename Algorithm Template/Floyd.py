@@ -18,7 +18,6 @@ Floyd为多源最短路算法
 
 
 def main():
-    from heapq import heappop, heappush
     # 有 n 个建筑和 m 条单向道路
     n, m = map(int, input().split())
     inf = float('inf')
