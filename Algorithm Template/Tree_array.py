@@ -1,7 +1,7 @@
 inf = float('inf')
 
 
-# 单点修改区间异或和
+# 单点异或区间异或和
 class PointXorRangeXor:
     """
     单点异或
